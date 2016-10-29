@@ -28,15 +28,19 @@ public class PlayerMovementController : MonoBehaviour
     private float minJumpVel = -2;
 
     private Rigidbody rigidBody;
+    private PlayerGamemanger playerGamemanager;
     private bool disableGravity = false;
 
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
+        playerGamemanager = GetComponent<PlayerGamemanger>();
     }
 
     void Update()
     {
+        if (!playerGamemanager.PlayerWakeUpController.IsAwake) return;
+
         GetMoveForwardInput();
         GetStrafeInput();
         GetJumpInput();
@@ -90,7 +94,7 @@ public class PlayerMovementController : MonoBehaviour
         rigidBody.velocity = toMoveAt;
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         Ray ray = new Ray(transform.position, -transform.up);
         if (Physics.Raycast(ray, 0.5f))
