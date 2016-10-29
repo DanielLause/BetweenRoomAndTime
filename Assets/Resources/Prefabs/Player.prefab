@@ -202,7 +202,7 @@ MonoBehaviour:
   CamLookAtLeft: {fileID: 4000013606429232}
   CamLerpSpeed: 1
   CamRotLerpSpeed: 1
-  VignetteLerpSpeed: 1
+  VignetteLerpSpeed: 2
   CamLookSpeed: 1
   LookaAroundTime: 2
   IsAwake: 0
@@ -276,6 +276,7 @@ MonoBehaviour:
   PlayerMovementController: {fileID: 0}
   PlayerCameraController: {fileID: 0}
   PlayerWakeUpController: {fileID: 0}
+  TestTubeBehaviour: {fileID: 0}
 --- !u!114 &114000013660194306
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -15,17 +15,30 @@ public class TestTubeBehaviour : MonoBehaviour
     {
         fillImage = GetComponent<Image>();
     }
+
     void Start()
     {
         ShootsLeft = MaxShootAmount;
     }
+
     void Update()
     {
-        ShootsLeft = ShootsLeft > MaxShootAmount ? MaxShootAmount : ShootsLeft < 0 ? 0 : ShootsLeft;
-
         fillImage.fillAmount = Mathf.Lerp(fillImage.fillAmount, ((float)ShootsLeft/(float)MaxShootAmount), LerpSpeep * Time.deltaTime);
     }
 
-    
+    public void IncreaseAmmo()
+    {
+        ShootsLeft++;
+        ShootsLeft = ShootsLeft > MaxShootAmount ? MaxShootAmount : ShootsLeft < 0 ? 0 : ShootsLeft;
+    }
 
+    public bool DeCreaseAmmo()
+    {
+        if (ShootsLeft > 0)
+        {
+            ShootsLeft--;
+            return true;
+        }
+        return false;
+    }
 }

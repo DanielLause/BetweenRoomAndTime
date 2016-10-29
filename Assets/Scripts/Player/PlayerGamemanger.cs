@@ -12,12 +12,15 @@ public class PlayerGamemanger : MonoBehaviour
     public PlayerCameraController PlayerCameraController;
     [HideInInspector]
     public PlayerWakeUpController PlayerWakeUpController;
+    [HideInInspector]
+    public TestTubeBehaviour TestTubeBehaviour;
 
     void Awake()
     {
         PlayerMovementController = GetComponent<PlayerMovementController>();
         PlayerCameraController = GetComponent<PlayerCameraController>();
         PlayerWakeUpController = GetComponent<PlayerWakeUpController>();
+        TestTubeBehaviour = FindObjectOfType<TestTubeBehaviour>();
     }
 
     void Start()
