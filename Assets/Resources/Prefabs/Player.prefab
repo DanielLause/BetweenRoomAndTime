@@ -154,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010862738054}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7822636, y: 0.548, z: 2.9659195}
+  m_LocalPosition: {x: 0.12521285, y: 0.509, z: -2.9259517}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -259,8 +259,8 @@ MonoBehaviour:
   StrafeSpeed: 5
   MaxStrafeSpeed: 4
   MinStrafeSpeed: -4
-  Gravity: 2
-  JumpForce: 60
+  Gravity: 1.5
+  JumpForce: 50
   JumpTime: 0.3
 --- !u!114 &114000013560711316
 MonoBehaviour:
