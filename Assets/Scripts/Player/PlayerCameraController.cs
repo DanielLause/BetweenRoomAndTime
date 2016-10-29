@@ -61,11 +61,6 @@ public class PlayerCameraController : MonoBehaviour
     {
         if (!playerGamemaner.PlayerWakeUpController.IsAwake) return;
 
-        if (Input.GetKeyDown(KeyCode.V))
-        {
-            EarthQuake(SHAKE_INTENSITY, SHAKE_DECAY);
-        }
-
         if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && playerGamemaner.PlayerMovementController.IsGrounded())
             ViewBob();
         else

@@ -56,7 +56,7 @@ public class PlayerGamemanger : MonoBehaviour
     {
         yield return new WaitForSeconds(Random.Range(MIN_SHAKE_DELAY, MAX_SHAKE_DELAY));
 
-        PlayerCameraController.EarthQuake(PlayerCameraController.SHAKE_INTENSITY, PlayerCameraController.SHAKE_DECAY);
+        //PlayerCameraController.EarthQuake(PlayerCameraController.SHAKE_INTENSITY, PlayerCameraController.SHAKE_DECAY);
 
         StartCoroutine(ShakeTimer());
     }
