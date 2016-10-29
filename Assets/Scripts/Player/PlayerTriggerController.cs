@@ -5,6 +5,7 @@ public class PlayerTriggerController : MonoBehaviour
 {
     private const string DOOR_TAG = "Door";
     private const string AMMO_TAG = "Ammo";
+    private const string MESSAGE_TAG = "Message";
 
     private PlayerGamemanger playerGamemanager;
 
@@ -25,6 +26,8 @@ public class PlayerTriggerController : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
+        else if (other.tag == MESSAGE_TAG)
+            Destroy(other.gameObject);
     }
 
     void OnTriggerExit(Collider other)

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - Ammo
+  - Message
   layers:
   - Default
   - TransparentFX
