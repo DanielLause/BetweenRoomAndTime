@@ -8,7 +8,7 @@ using UnityEngine;
 class DoorBehaviour : TimeShiftManager
 {
     public bool DoorBlocked = false;
-    public float TriggerRadius = 0;
+    public float TriggerRadius = 2;
     private SphereCollider sphereCollider;
     void Start()
     {
