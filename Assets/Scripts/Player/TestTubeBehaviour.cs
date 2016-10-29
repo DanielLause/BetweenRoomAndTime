@@ -9,7 +9,6 @@ public class TestTubeBehaviour : MonoBehaviour
     public int ShootsLeft = 0;
     public float LerpSpeep = 0;
 
-    private float fillValue = 0;
     private Image fillImage = null;
 
     void Awake()
@@ -19,7 +18,6 @@ public class TestTubeBehaviour : MonoBehaviour
     void Start()
     {
         ShootsLeft = MaxShootAmount;
-        fillValue = 1 / MaxShootAmount;
     }
     void Update()
     {
