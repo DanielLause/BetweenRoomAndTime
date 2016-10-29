@@ -25,7 +25,6 @@ public class PlayerMovementController : MonoBehaviour
     public float JumpTime = 0.3f;
     private float jumpVel = 0;
     private float maxJumpVel = 2;
-    private float minJumpVel = -2;
 
     private Rigidbody rigidBody;
     private bool disableGravity = false;
