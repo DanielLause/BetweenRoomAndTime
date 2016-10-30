@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: d2d04c52d5e18c643bc3fcc7042f4a23
+timeCreated: 1477757525
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arms
+    100002: Ellbow_ctrl_L
+    100004: Ellbow_ctrl_R
+    100006: Ellbow_L_FK_01_jnt
+    100008: Ellbow_R_FK_01_jnt
+    100010: LFinger_FK_01_jnt
+    100012: LFinger_FK_02_jnt
+    100014: LFinger_FK_03_jnt
+    100016: LFinger_FK_04_jnt
+    100018: LFinger_R_FK_01_jnt
+    100020: LFinger_R_FK_02_jnt
+    100022: LFinger_R_FK_03_jnt
+    100024: LFinger_R_FK_04_jnt
+    100026: MFinger_L_FK_01_jnt
+    100028: MFinger_L_FK_02_jnt
+    100030: MFinger_L_FK_03_jnt
+    100032: MFinger_L_FK_04_jnt
+    100034: MFinger_R_FK_01_jnt
+    100036: MFinger_R_FK_02_jnt
+    100038: MFinger_R_FK_04_jnt
+    100040: MFinger_R_FK_04_jnt 1
+    100042: Pfinger_L_FK_01_jnt
+    100044: Pfinger_L_FK_02_jnt
+    100046: Pfinger_L_FK_03_jnt
+    100048: Pfinger_L_FK_04_jnt
+    100050: PFinger_R_FK_01_jnt
+    100052: PFinger_R_FK_02_jnt
+    100054: PFinger_R_FK_03_jnt
+    100056: PFinger_R_FK_04_jnt
+    100058: RFinger_L_FK_01_jnt
+    100060: RFinger_L_FK_02_jnt
+    100062: RFinger_L_FK_03_jnt
+    100064: RFinger_L_FK_04_jnt
+    100066: RFinger_R_FK_01_jnt
+    100068: RFinger_R_FK_02_jnt
+    100070: RFinger_R_FK_03_jnt
+    100072: RFinger_R_FK_04_jnt
+    100074: Root
+    100076: Shoulder_ctrl_L
+    100078: Shoulder_ctrl_R
+    100080: Shoulder_L_FK_01_jnt
+    100082: Shoulder_R_FK_01_jnt1
+    100084: Thumb_L_FK_01_jnt
+    100086: Thumb_L_FK_02_jnt
+    100088: Thumb_L_FK_03_jnt
+    100090: Thumb_R_FK_01_jnt
+    100092: Thumb_R_FK_02_jnt
+    100094: Thumb_R_FK_03_jnt
+    100096: //RootNode
+    100098: Wrist_L_FK_01_jnt
+    100100: Wrist_R_FK_01_jnt
+    400000: Arms
+    400002: Ellbow_ctrl_L
+    400004: Ellbow_ctrl_R
+    400006: Ellbow_L_FK_01_jnt
+    400008: Ellbow_R_FK_01_jnt
+    400010: LFinger_FK_01_jnt
+    400012: LFinger_FK_02_jnt
+    400014: LFinger_FK_03_jnt
+    400016: LFinger_FK_04_jnt
+    400018: LFinger_R_FK_01_jnt
+    400020: LFinger_R_FK_02_jnt
+    400022: LFinger_R_FK_03_jnt
+    400024: LFinger_R_FK_04_jnt
+    400026: MFinger_L_FK_01_jnt
+    400028: MFinger_L_FK_02_jnt
+    400030: MFinger_L_FK_03_jnt
+    400032: MFinger_L_FK_04_jnt
+    400034: MFinger_R_FK_01_jnt
+    400036: MFinger_R_FK_02_jnt
+    400038: MFinger_R_FK_04_jnt
+    400040: MFinger_R_FK_04_jnt 1
+    400042: Pfinger_L_FK_01_jnt
+    400044: Pfinger_L_FK_02_jnt
+    400046: Pfinger_L_FK_03_jnt
+    400048: Pfinger_L_FK_04_jnt
+    400050: PFinger_R_FK_01_jnt
+    400052: PFinger_R_FK_02_jnt
+    400054: PFinger_R_FK_03_jnt
+    400056: PFinger_R_FK_04_jnt
+    400058: RFinger_L_FK_01_jnt
+    400060: RFinger_L_FK_02_jnt
+    400062: RFinger_L_FK_03_jnt
+    400064: RFinger_L_FK_04_jnt
+    400066: RFinger_R_FK_01_jnt
+    400068: RFinger_R_FK_02_jnt
+    400070: RFinger_R_FK_03_jnt
+    400072: RFinger_R_FK_04_jnt
+    400074: Root
+    400076: Shoulder_ctrl_L
+    400078: Shoulder_ctrl_R
+    400080: Shoulder_L_FK_01_jnt
+    400082: Shoulder_R_FK_01_jnt1
+    400084: Thumb_L_FK_01_jnt
+    400086: Thumb_L_FK_02_jnt
+    400088: Thumb_L_FK_03_jnt
+    400090: Thumb_R_FK_01_jnt
+    400092: Thumb_R_FK_02_jnt
+    400094: Thumb_R_FK_03_jnt
+    400096: //RootNode
+    400098: Wrist_L_FK_01_jnt
+    400100: Wrist_R_FK_01_jnt
+    4300000: Arms
+    7400000: Walkcycle
+    9500000: //RootNode
+    13700000: Arms
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Walkcycle
+      takeName: Walkcycle
+      firstFrame: 1
+      lastFrame: 22
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Arms
+        weight: 1
+      - path: Ellbow_ctrl_L
+        weight: 1
+      - path: Ellbow_ctrl_R
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/LFinger_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/LFinger_FK_01_jnt/LFinger_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/LFinger_FK_01_jnt/LFinger_FK_02_jnt/LFinger_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/LFinger_FK_01_jnt/LFinger_FK_02_jnt/LFinger_FK_03_jnt/LFinger_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/MFinger_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/MFinger_L_FK_01_jnt/MFinger_L_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/MFinger_L_FK_01_jnt/MFinger_L_FK_02_jnt/MFinger_L_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/MFinger_L_FK_01_jnt/MFinger_L_FK_02_jnt/MFinger_L_FK_03_jnt/MFinger_L_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Pfinger_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Pfinger_L_FK_01_jnt/Pfinger_L_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Pfinger_L_FK_01_jnt/Pfinger_L_FK_02_jnt/Pfinger_L_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Pfinger_L_FK_01_jnt/Pfinger_L_FK_02_jnt/Pfinger_L_FK_03_jnt/Pfinger_L_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/RFinger_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/RFinger_L_FK_01_jnt/RFinger_L_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/RFinger_L_FK_01_jnt/RFinger_L_FK_02_jnt/RFinger_L_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/RFinger_L_FK_01_jnt/RFinger_L_FK_02_jnt/RFinger_L_FK_03_jnt/RFinger_L_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Thumb_L_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Thumb_L_FK_01_jnt/Thumb_L_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_L_FK_01_jnt/Ellbow_L_FK_01_jnt/Wrist_L_FK_01_jnt/Thumb_L_FK_01_jnt/Thumb_L_FK_02_jnt/Thumb_L_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/LFinger_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/LFinger_R_FK_01_jnt/LFinger_R_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/LFinger_R_FK_01_jnt/LFinger_R_FK_02_jnt/LFinger_R_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/LFinger_R_FK_01_jnt/LFinger_R_FK_02_jnt/LFinger_R_FK_03_jnt/LFinger_R_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/MFinger_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/MFinger_R_FK_01_jnt/MFinger_R_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/MFinger_R_FK_01_jnt/MFinger_R_FK_02_jnt/MFinger_R_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/MFinger_R_FK_01_jnt/MFinger_R_FK_02_jnt/MFinger_R_FK_04_jnt/MFinger_R_FK_04_jnt
+          1
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/PFinger_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/PFinger_R_FK_01_jnt/PFinger_R_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/PFinger_R_FK_01_jnt/PFinger_R_FK_02_jnt/PFinger_R_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/PFinger_R_FK_01_jnt/PFinger_R_FK_02_jnt/PFinger_R_FK_03_jnt/PFinger_R_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/RFinger_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/RFinger_R_FK_01_jnt/RFinger_R_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/RFinger_R_FK_01_jnt/RFinger_R_FK_02_jnt/RFinger_R_FK_03_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/RFinger_R_FK_01_jnt/RFinger_R_FK_02_jnt/RFinger_R_FK_03_jnt/RFinger_R_FK_04_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/Thumb_R_FK_01_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/Thumb_R_FK_01_jnt/Thumb_R_FK_02_jnt
+        weight: 1
+      - path: Root/Shoulder_R_FK_01_jnt1/Ellbow_R_FK_01_jnt/Wrist_R_FK_01_jnt/Thumb_R_FK_01_jnt/Thumb_R_FK_02_jnt/Thumb_R_FK_03_jnt
+        weight: 1
+      - path: Shoulder_ctrl_L
+        weight: 1
+      - path: Shoulder_ctrl_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
