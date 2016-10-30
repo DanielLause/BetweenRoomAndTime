@@ -5,9 +5,15 @@ using System.Collections;
 public class PlayerMovementController : MonoBehaviour
 {
     private const string DOOR_TAG = "Door";
+    private const string STAIR_TAG = "Stair";
 
     private const int NEUTRAL = 0;
     private const float DIST_TO_JUMP_PEAK = 0.05f;
+
+    [Header("Layer")]
+    public LayerMask RaycastLayerMask;
+
+    public float MaxSpeed;
 
     [Header("Forward")]
     public float WalkSpeed = 5;
@@ -47,6 +53,16 @@ public class PlayerMovementController : MonoBehaviour
         GetStrafeInput();
         GetJumpInput();
         ApplyVelocity();
+        CheckSpeed();
+    }
+
+    private void CheckSpeed()
+    {
+        if (rigidBody.velocity.sqrMagnitude > MaxSpeed)
+        {
+            print("inn");
+            rigidBody.velocity = rigidBody.velocity.normalized * MaxSpeed;
+        }
     }
 
     private void GetMoveForwardInput()
@@ -83,17 +99,18 @@ public class PlayerMovementController : MonoBehaviour
         Vector3 forward = Camera.main.transform.forward;
         forward.y = 0;
 
-        Vector3 toMoveAt = new Vector3();
+        rigidBody.AddForce(forward * forwardSpeed * 100, ForceMode.Force);
+        rigidBody.AddForce(Camera.main.transform.right * strafeSpeed * 100, ForceMode.Force);
+    }
 
-        if (!IsGrounded() && !disableGravity)
-            toMoveAt += new Vector3(0, -Gravity, 0);
-        else
-            toMoveAt += new Vector3(0, jumpVel, 0);
+    private Vector3 GetGroundNormal()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Vector3.down);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 10, RaycastLayerMask))
+            return hit.normal;
 
-        toMoveAt += forward * forwardSpeed;
-        toMoveAt += Camera.main.transform.right * strafeSpeed;
-
-        rigidBody.velocity = toMoveAt;
+        else return Vector3.zero;
     }
 
     public bool IsGrounded()
@@ -111,6 +128,20 @@ public class PlayerMovementController : MonoBehaviour
         return false;
     }
 
+    public bool IsOnStair()
+    {
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 1f))
+        {
+            if (hit.transform.tag == STAIR_TAG)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     private void Jump()
     {
