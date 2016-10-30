@@ -27,9 +27,21 @@ public class TimeShiftManager : MonoBehaviour
 
         if (AnimateChilds && transform.childCount > 0)
         {
-            childAnimator = new Animator[transform.childCount];
+            int childWithAnimation = 0;
             for (int i = 0; i < transform.childCount; i++)
-                childAnimator[i] = transform.GetChild(i).GetComponent<Animator>();
+                if (transform.GetChild(i).GetComponent<Animator>() != null)
+                    childWithAnimation++;
+
+            childAnimator = new Animator[childWithAnimation];
+            int temp = 0;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                if (transform.GetChild(i).GetComponent<Animator>() != null)
+                {
+                    childAnimator[temp] = transform.GetChild(i).GetComponent<Animator>();
+                    temp++;
+                }
+            }
         }
         else
             AnimateChilds = false;

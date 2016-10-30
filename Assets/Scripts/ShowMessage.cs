@@ -15,7 +15,7 @@ public class ShowMessage : MonoBehaviour
 
     void OnDisable()
     {
-        if (playerGamemanger != null)
-            playerGamemanger.ShowMessage(Message, delay);
+        //if (playerGamemanger != null)
+            //playerGamemanger.ShowMessage(Message, delay);
     }
 }
