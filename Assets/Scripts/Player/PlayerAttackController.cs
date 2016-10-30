@@ -23,6 +23,26 @@ public class PlayerAttackController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             playerGamemanager.TestTubeBehaviour.DeCreaseAmmo();
+            FireRayAtATarget(false);
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            playerGamemanager.TestTubeBehaviour.DeCreaseAmmo();
+            FireRayAtATarget(false);
+        }
+    }
+
+    private void FireRayAtATarget(bool leftCLick)
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 20))
+        {
+            var manager = hit.transform.GetComponent<TimeShiftManager>();
+
+            if (manager != null)
+                manager.AnimationSlider = leftCLick ? -1 : 1;
         }
     }
 
