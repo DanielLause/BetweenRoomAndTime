@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 02859da31e2ca8c46855ce9f83b4230d
-timeCreated: 1477765528
+guid: 2d2e5d54f6e8e6c43a8daaa47e66118a
+timeCreated: 1477828450
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: pCylinder23
+    100004: pCylinder24
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: pCube1
-    9500000: //RootNode
+    400002: pCylinder23
+    400004: pCylinder24
+    2300000: pCylinder23
+    2300002: pCylinder24
+    3300000: pCylinder23
+    3300002: pCylinder24
+    4300000: pCylinder23
+    4300002: pCylinder24
   materials:
     importMaterials: 1
     materialName: 0
@@ -35,7 +41,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 10
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
@@ -69,7 +75,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
