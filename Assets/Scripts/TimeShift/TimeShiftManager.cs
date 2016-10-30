@@ -5,9 +5,12 @@ public class TimeShiftManager : MonoBehaviour
 {
 
     [Range(-1, 1)]
-    public int AnimationSlider;
+    public int AnimationSlider = -1;
     public bool AnimateThisObject = true;
     public bool AnimateChilds = true;
+
+    const float closed = -10;
+    const float open = 10;
 
     private Animator thisAnimator;
 
@@ -24,12 +27,25 @@ public class TimeShiftManager : MonoBehaviour
 
         if (AnimateChilds && transform.childCount > 0)
         {
-            childAnimator = new Animator[transform.childCount];
+            int childWithAnimation = 0;
             for (int i = 0; i < transform.childCount; i++)
-                childAnimator[i] = transform.GetChild(i).GetComponent<Animator>();
+                if (transform.GetChild(i).GetComponent<Animator>() != null)
+                    childWithAnimation++;
+
+            childAnimator = new Animator[childWithAnimation];
+            int temp = 0;
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                if (transform.GetChild(i).GetComponent<Animator>() != null)
+                {
+                    childAnimator[temp] = transform.GetChild(i).GetComponent<Animator>();
+                    temp++;
+                }
+            }
         }
         else
             AnimateChilds = false;
+
     }
     void Update()
     {
@@ -39,11 +55,31 @@ public class TimeShiftManager : MonoBehaviour
     public virtual void OnUpdate()
     {
         if (AnimateThisObject)
-            thisAnimator.SetFloat("AnimationValue", AnimationSlider);
+        {
+            float temp = thisAnimator.GetFloat("AnimationValue");
+            float newValue = 0;
+            if (AnimationSlider == 0)
+                newValue = Mathf.Lerp(temp, AnimationSlider == 1 ? open : closed, 2 * Time.deltaTime * AnimationSlider);
+            else
+                newValue = Mathf.Lerp(temp, AnimationSlider == 1 ? open : closed, 2 * Time.deltaTime);
+            thisAnimator.SetFloat("AnimationValue", newValue);
+        }
 
         if (AnimateChilds)
+        {
             for (int i = 0; i < childAnimator.Length; i++)
-                childAnimator[i].SetFloat("AnimationValue", AnimationSlider);
+            {
+                float temp = childAnimator[i].GetFloat("AnimationValue");
+                float newValue = 0;
+                if (AnimationSlider == 0)
+                    newValue = Mathf.Lerp(temp, AnimationSlider == 1 ? open : closed, 2 * Time.deltaTime * AnimationSlider);
+                else
+                    newValue = Mathf.Lerp(temp, AnimationSlider == 1 ? open : closed, 2 * Time.deltaTime);
+                childAnimator[i].SetFloat("AnimationValue", newValue);
+            }
+        }
+
+
     }
 }
 

@@ -1,8 +1,12 @@
 ﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerCameraController : MonoBehaviour
 {
+    public const float SHAKE_DECAY = 0.00008f;
+    public const float SHAKE_INTENSITY = 0.05f;
+
     public Transform ToFollow;
     public float CamLerpSpeed = 25;
 
@@ -25,6 +29,11 @@ public class PlayerCameraController : MonoBehaviour
 
     private float rotationX = 0F;
     private float rotationY = 0F;
+
+    [Header("EarthQuake")]
+    private float shakeIntensity = 0f;
+    private float shakeDekay = 0f;
+    private bool Shaking = false;
 
     private Quaternion originalRotation;
     private PlayerGamemanger playerGamemaner;
@@ -52,7 +61,7 @@ public class PlayerCameraController : MonoBehaviour
     {
         if (!playerGamemaner.PlayerWakeUpController.IsAwake) return;
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && playerGamemaner.PlayerMovementController.IsGrounded())
             ViewBob();
         else
             Camera.main.transform.position = ToFollow.position;
@@ -65,6 +74,35 @@ public class PlayerCameraController : MonoBehaviour
 
         Quaternion wantedRot = originalRotation * xQuaternion * yQuaternion;
         Camera.main.transform.localRotation = Quaternion.Lerp(Camera.main.transform.localRotation, wantedRot, CamLerpSpeed * Time.deltaTime);
+
+        Shake();
+    }
+
+    public void EarthQuake(float intensity, float dekay)
+    {
+        Shaking = true;
+        shakeIntensity = intensity;
+        shakeDekay = dekay;
+    }
+
+    private void Shake()
+    {
+        if (shakeIntensity > 0)
+        {
+            Vector3 tempPos = Camera.main.transform.position;
+
+            tempPos  += Random.insideUnitSphere * shakeIntensity;
+            Camera.main.transform.rotation = new Quaternion(Camera.main.transform.rotation.x + Random.Range(-shakeIntensity, shakeIntensity) * .2f,
+                                        Camera.main.transform.rotation.y + Random.Range(-shakeIntensity, shakeIntensity) * .2f,
+                                        Camera.main.transform.rotation.z + Random.Range(-shakeIntensity, shakeIntensity) * .2f,
+                                        Camera.main.transform.rotation.w + Random.Range(-shakeIntensity, shakeIntensity) * .2f);
+
+            shakeIntensity -= shakeDekay;
+        }
+        else if (Shaking)
+        {
+            Shaking = false;
+        }
     }
 
     private void ViewBob()

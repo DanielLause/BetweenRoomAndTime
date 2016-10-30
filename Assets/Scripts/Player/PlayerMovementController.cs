@@ -4,39 +4,45 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovementController : MonoBehaviour
 {
+    private const string DOOR_TAG = "Door";
+
     private const int NEUTRAL = 0;
+    private const float DIST_TO_JUMP_PEAK = 0.05f;
 
     [Header("Forward")]
     public float WalkSpeed = 5;
     public float MaxWalkSpeed = 4;
     public float MinWalkSpeed = -4;
-    private float forwardSpeed;
+    public float forwardSpeed;
 
 
     [Header("Right")]
     public float StrafeSpeed = 5;
     public float MaxStrafeSpeed = 4;
     public float MinStrafeSpeed = -4;
-    private float strafeSpeed;
+    public float strafeSpeed;
 
     [Header("Jump")]
     public float Gravity = 2;
     public float JumpForce = 60;
     public float JumpTime = 0.3f;
     private float jumpVel = 0;
-    private float maxJumpVel = 2;
-    private float minJumpVel = -2;
+    private float maxJumpVel = 8;
 
     private Rigidbody rigidBody;
+    private PlayerGamemanger playerGamemanager;
     private bool disableGravity = false;
 
     void Awake()
     {
         rigidBody = GetComponent<Rigidbody>();
+        playerGamemanager = GetComponent<PlayerGamemanger>();
     }
 
     void Update()
     {
+        if (!playerGamemanager.PlayerWakeUpController.IsAwake) return;
+
         GetMoveForwardInput();
         GetStrafeInput();
         GetJumpInput();
@@ -90,11 +96,17 @@ public class PlayerMovementController : MonoBehaviour
         rigidBody.velocity = toMoveAt;
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         Ray ray = new Ray(transform.position, -transform.up);
-        if (Physics.Raycast(ray, 0.5f))
-            return true;
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 0.5f))
+        {
+            if (hit.transform.tag != DOOR_TAG)
+                return true;
+            else
+                return false;
+        }
 
         return false;
     }

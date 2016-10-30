@@ -5,9 +5,25 @@ public class PlayerAttackController : MonoBehaviour
 {
     public float MaxDistance = 20;
 
+    private PlayerGamemanger playerGamemanager;
+
+    void Awake()
+    {
+        playerGamemanager = GetComponent<PlayerGamemanger>();
+    }
+
     void Update()
     {
+        CheckAttackInput();
         CheckHighLights();
+    }
+
+    private void CheckAttackInput()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            playerGamemanager.TestTubeBehaviour.DeCreaseAmmo();
+        }
     }
 
     private void CheckHighLights()
