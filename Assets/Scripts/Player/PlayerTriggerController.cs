@@ -6,6 +6,8 @@ public class PlayerTriggerController : MonoBehaviour
     private const string DOOR_TAG = "Door";
     private const string AMMO_TAG = "Ammo";
     private const string MESSAGE_TAG = "Message";
+    private const string Magnet_TAG = "Magnet";
+
 
     private PlayerGamemanger playerGamemanager;
 
@@ -28,6 +30,10 @@ public class PlayerTriggerController : MonoBehaviour
         }
         else if (other.tag == MESSAGE_TAG)
             Destroy(other.gameObject);
+        else if (other.tag == Magnet_TAG)
+        {
+            other.gameObject.GetComponent<Animator>().enabled = false;
+        }
     }
 
     void OnTriggerExit(Collider other)

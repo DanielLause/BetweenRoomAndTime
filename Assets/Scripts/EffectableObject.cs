@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
+using System.Collections.Generic;
 
 public class EffectableObject : MonoBehaviour, IHighlightable
 {
@@ -11,21 +11,41 @@ public class EffectableObject : MonoBehaviour, IHighlightable
     private Coroutine highLightedCoroutine;
     private bool highlighted = false;
 
+    private List<MeshRenderer> renderers = new List<MeshRenderer>();
+
     void Awake()
     {
         OutlineMat = (Material)Resources.Load("Materials/OutlineMat");
     }
 
+    void Start()
+    {
+        renderers.Add(GetComponent<MeshRenderer>());
+        MeshRenderer[] temp = GetComponentsInChildren<MeshRenderer>();
+
+        for (int i = 0; i < temp.Length; i++)
+            renderers.Add(temp[i]);
+    }
+
     public void DeHightlight()
     {
         highlighted = false;
-        Utillitys.DeHightLightMeshrenderer(GetComponent<MeshRenderer>());
+
+        for (int i = 0; i < renderers.Count; i++)
+        {
+            Utillitys.DeHightLightMeshrenderer(renderers[i]);
+        }
     }   
 
     public void Highlight()
     {
         if (!highlighted)
-            Utillitys.HightLightMeshrenderer(GetComponent<MeshRenderer>(), OutlineMat);
+        {
+            for (int i = 0; i < renderers.Count; i++)
+            {
+                Utillitys.HightLightMeshrenderer(renderers[i], OutlineMat);
+            }
+        }
 
         if (highLightedCoroutine != null)
             StopCoroutine(highLightedCoroutine);
