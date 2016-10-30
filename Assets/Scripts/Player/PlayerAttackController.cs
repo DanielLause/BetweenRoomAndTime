@@ -20,9 +20,44 @@ public class PlayerAttackController : MonoBehaviour
 
     private void CheckAttackInput()
     {
-        if (Input.GetMouseButtonDown(0))
+        FireRayAtATargetRight();
+    }
+
+    private void FireRayAtATargetRight()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 20))
         {
-            playerGamemanager.TestTubeBehaviour.DeCreaseAmmo();
+            var manager = hit.transform.GetComponent<TimeShiftManager>();
+
+            if (manager != null)
+            {
+                if (Input.GetMouseButton(1))
+                    manager.AnimationSlider = 1;
+                else
+                    manager.AnimationSlider = 0;
+            }
+        }
+    }
+
+    private void FireRayAtATargetLeft()
+    {
+        Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, 20))
+        {
+            var manager = hit.transform.GetComponent<TimeShiftManager>();
+
+            if (manager != null)
+            {
+                if (Input.GetMouseButton(1))
+                    manager.AnimationSlider = -1;
+                else
+                    manager.AnimationSlider = 0;
+            }
         }
     }
 
